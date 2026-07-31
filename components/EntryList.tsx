@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { EntryArt } from "@/components/EntryArt";
 import { Prose } from "@/components/Prose";
 import type { Entry } from "@/data/entries";
 import { industries as allIndustries } from "@/data/site";
@@ -18,6 +19,9 @@ function EntryCard({ entry, index }: { entry: Entry; index: number }) {
     // --field drives the card's tint, its offset shadow and the detail labels.
     <article className="card" style={{ ["--field" as string]: entry.accent }}>
       <div className="cardField">
+        <div className="cardArt">
+          <EntryArt slug={entry.slug} />
+        </div>
         <span className="cardIndex">Entry {pad(index)}</span>
         <h3 className="cardName">
           {entry.name}

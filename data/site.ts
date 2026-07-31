@@ -36,8 +36,8 @@ export const site = {
     },
   },
   team: [
-    { name: "Lana Huertas", role: "Main contact", email: "lrhuertas@fit.edu.ph" },
-    { name: "Judea Tablate", role: "Team member", email: "jctablate@fit.edu.ph" },
+    { name: "Lana Huertas", email: "lrhuertas@fit.edu.ph" },
+    { name: "Judea Tablate", email: "jctablate@fit.edu.ph" },
   ],
   competition: {
     name: "Go Healthy with Taiwan 2026",

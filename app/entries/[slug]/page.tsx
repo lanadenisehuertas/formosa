@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { EntryArt } from "@/components/EntryArt";
 import { Prose } from "@/components/Prose";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -69,14 +70,22 @@ export default async function EntryBriefPage({
           className="briefHead"
           style={{ ["--field" as string]: entry.accent }}
         >
-          <span className="briefIndex">
-            Entry {String(index + 1).padStart(2, "0")}
-          </span>
-          <h1 className="briefName">
-            {entry.name}
-            {entry.nameZh ? <span className="zh">{entry.nameZh}</span> : null}
-          </h1>
-          <p className="briefTagline">{entry.tagline}</p>
+          <div className="briefHeadTop">
+            <div>
+              <span className="briefIndex">
+                Entry {String(index + 1).padStart(2, "0")}
+              </span>
+              <h1 className="briefName">
+                {entry.name}
+                {entry.nameZh ? <span className="zh">{entry.nameZh}</span> : null}
+              </h1>
+              <p className="briefTagline">{entry.tagline}</p>
+            </div>
+
+            <div className="briefHeadArt">
+              <EntryArt slug={entry.slug} />
+            </div>
+          </div>
 
           <p className="briefProposalTitle">{entry.proposalTitle}</p>
 

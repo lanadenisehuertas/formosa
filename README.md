@@ -25,6 +25,14 @@ Verifies the paragraph splitter (below) still reproduces every entry's prose
 word for word, and flags any long field still rendering as a single wall of text.
 Worth running after editing `data/entries.ts`.
 
+```bash
+npm run check:links
+```
+
+Requests every taiwanexcellence.org product link on the site and reports anything
+not returning 200. Run it before sharing the link — a dead product link is the
+one broken thing a judge is guaranteed to click.
+
 ## Editing the content
 
 **You should never need to touch a component to change what the site says.**
@@ -35,6 +43,7 @@ Worth running after editing `data/entries.ts`.
 | The seven entries — every field, in display order | `data/entries.ts` |
 | Colours, type, spacing | `app/globals.css` |
 | Browser tab / home-screen icon | `app/icon.svg`, `app/apple-icon.tsx` |
+| Per-entry concept illustrations | `components/EntryArt.tsx` |
 
 ### Adding or editing an entry
 
@@ -51,6 +60,20 @@ Required per entry: `slug`, `name`, `proposalTitle`, `tagline`, `accent`,
 
 `accent` is the card's field colour. Keep new ones desaturated — the palette is
 paper and ink with a single red accent, and a saturated card breaks it.
+
+### Illustrations
+
+Each entry has a hand-drawn SVG concept diagram in `components/EntryArt.tsx`,
+keyed by slug and shown on both the card and the brief page. They share one
+palette — ink outline, cream fill, violet accent — so they read as a set against
+seven different card colours.
+
+They're diagrammatic on purpose: these concepts aren't built yet, and a polished
+product render would imply hardware that doesn't exist. Each drawing shows the
+mechanism the proposal actually claims.
+
+An entry with no matching slug in that file simply renders no illustration, so
+adding an entry never breaks the layout.
 
 ### Long paragraphs
 

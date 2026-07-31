@@ -803,6 +803,23 @@ button {
   background: var(--field, var(--paper-2));
 }
 
+/* Concept illustration sits above the entry name, inside the colour field. */
+.cardArt {
+  display: flex;
+  justify-content: center;
+  padding-block: 0.35rem 1.1rem;
+}
+
+.cardArt svg {
+  width: min(100%, 15rem);
+  height: auto;
+  display: block;
+}
+
+.cardArt:empty {
+  display: none;
+}
+
 .cardIndex {
   display: inline-block;
   font-family: var(--mono);
@@ -1235,6 +1252,28 @@ button {
   padding: clamp(1.5rem, 4vw, 2.5rem);
   box-shadow: 8px 8px 0 var(--ink);
   background: var(--field, var(--paper-2));
+}
+
+.briefHeadTop {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .briefHeadTop {
+    grid-template-columns: minmax(0, 1fr) 15rem;
+    align-items: center;
+    gap: 2.5rem;
+  }
+}
+
+.briefHeadArt svg {
+  width: 100%;
+  max-width: 15rem;
+  height: auto;
+  display: block;
+  margin-inline: auto;
 }
 
 .briefIndex {

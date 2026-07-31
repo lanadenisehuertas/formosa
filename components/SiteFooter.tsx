@@ -9,8 +9,8 @@ export function SiteFooter() {
             <h3>Contact</h3>
             <ul>
               {site.team.map((member) => (
-                <li key={member.name + member.role}>
-                  {member.name} — {member.role}
+                <li key={member.name}>
+                  {member.name}
                   {member.email ? (
                     <>
                       <br />
