@@ -27,6 +27,13 @@ export const site = {
       url: "https://www.feutech.edu.ph/",
       location: "Sampaloc, Manila, Philippines",
     },
+    /** Where the studio name comes from. */
+    note: {
+      label: "Why “Formosa”?",
+      term: "Ilha Formosa",
+      meaning: "beautiful island",
+      body: "Portuguese sailors are said to have given Taiwan that name on first sighting it in the 1540s. It outlasted them by four centuries — and every concept on this page begins on that island.",
+    },
   },
   team: [
     { name: "Lana Huertas", role: "Main contact", email: "lrhuertas@fit.edu.ph" },

@@ -112,6 +112,18 @@ export default function HomePage() {
                     <dd>{taiwanCompanies.length}</dd>
                   </div>
                 </dl>
+
+                <aside className="noteCard">
+                  <Sparkle className="sticker noteSparkle" color="#f5399b" />
+                  <p className="noteLabel">{site.about.note.label}</p>
+                  <p className="noteTerm">
+                    {site.about.note.term}
+                    <span className="noteMeaning">
+                      “{site.about.note.meaning}”
+                    </span>
+                  </p>
+                  <p className="noteBody">{site.about.note.body}</p>
+                </aside>
               </div>
             </div>
           </div>
