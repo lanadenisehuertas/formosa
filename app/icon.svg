@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Formosa Works">
+  <rect width="32" height="32" rx="7.5" fill="#4b3fd4"/>
+  <g fill="#d6f24e">
+    <rect x="8.6" y="6.8" width="4.6" height="18.4" rx="1.5"/>
+    <rect x="8.6" y="6.8" width="14.2" height="4.4" rx="1.5"/>
+    <rect x="8.6" y="13.9" width="10.4" height="4.4" rx="1.5"/>
+  </g>
+  <circle cx="24.3" cy="23.4" r="2.7" fill="#f5399b"/>
+</svg>
